@@ -1,12 +1,11 @@
 const sgMail = require('@sendgrid/mail')
 
-const SG_API_KEY = process.env.SG_API_KEY || ''
-const mail_sender = process.env.EMAIL_SENDER || 'harshit9715@gmail.com'
+const {SG_API_KEY, EMAIL_SENDER} = require('../config')
 sgMail.setApiKey(SG_API_KEY);
 
 const sendWelcomeEmail = (email, name) => {
     sgMail.send({
-        from: mail_sender,
+        from: EMAIL_SENDER,
         to: email,
         subject: 'Thanks for joining in!',
         text: `Welcome to the app, ${name}. Let me know how you get along with the app.`

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-const dbName = 'task-manager-api'
-const connURL = `mongodb://127.0.0.1:27017/${dbName}`
+const {MONGODB_NAME, MONGODB_URL} = require('../config')
+const connURL = `${MONGODB_URL}/${MONGODB_NAME}`
 
 mongoose.connect(connURL, {
     useNewUrlParser: true, 
