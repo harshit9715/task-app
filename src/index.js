@@ -8,11 +8,9 @@ const { PORT, Maintenance } = require('./config');
 const app = express()
 
 
-
-
 // Middleware for maintenance mode
 app.use((req, res, next) => {
-    if (Maintenance)
+    if (Maintenance==='true')
         return res.status(503).send({error: 'Site under maintenance, please try again later.'})
     next()
 })
