@@ -22,4 +22,7 @@ npm run start
 - NodeJS 10+ and NPM
 - enviroment variables setup (in .env file)
 
+## Documentation
+
+You can check out the documentation [here](./docs/TaskAPIDoc.md).
 You can check out the deployed version [here](https://documenter.getpostman.com/view/8553846/TVt18jZN).
