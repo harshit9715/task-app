@@ -1,7 +1,7 @@
 # Task App
 
 A simple NodeJs Express backend application that remembers task and their status for you.
-A simple todo application.
+It works like a simple ToDo application.
 
 ## Deployment
 
