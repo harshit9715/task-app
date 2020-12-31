@@ -1,9 +1,12 @@
 const express = require('express')
 
+var swaggerUi = require('swagger-ui-express')
+
 require('./db/mongoose')
 
 const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
+const swaggerDocument = require('../docs/task.json');
 const { Maintenance } = require('./config');
 const app = express()
 
@@ -14,6 +17,9 @@ app.use((req, res, next) => {
         return res.status(503).send({error: 'Site under maintenance, please try again later.'})
     next()
 })
+
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 app.use(express.json())
