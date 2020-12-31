@@ -1,26 +1,5 @@
-const express = require('express')
-
-require('./db/mongoose')
-
-const userRouter = require('./routers/user')
-const taskRouter = require('./routers/task')
-const { PORT, Maintenance } = require('./config');
-const app = express()
-
-
-// Middleware for maintenance mode
-app.use((req, res, next) => {
-    if (Maintenance==='true')
-        return res.status(503).send({error: 'Site under maintenance, please try again later.'})
-    next()
-})
-
-
-app.use(express.json())
-
-// Routes
-app.use(userRouter);
-app.use(taskRouter);
+const app = require('./app')
+const { PORT } = require('./config')
 
 // Start the express app.
 if (PORT){

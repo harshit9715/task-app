@@ -82,7 +82,9 @@ router.put('/users/me', auth, async (req, res) => {
         await req.user.save()
         res.send(req.user)
     } catch (e) {
-        res.status(500).send(e)
+        if (!allowedUpdates.some(item => Object.keys(e).includes(item)))
+            return res.status(400).send(e)
+        res.status(500).send()
     }
 })
 

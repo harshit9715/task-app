@@ -2,7 +2,6 @@
 /node_modules
 /playground
 /config
-/tests
 # Files
 
 package-lock.json
