@@ -5,8 +5,12 @@ It works like a simple ToDo application.
 
 ## Documentation
 
-You can check out the documentation [here](./docs/TaskAPIDoc.md).
-You can check out the deployed version [here](https://documenter.getpostman.com/view/8553846/TVt1ARGk).
+You can check out these API documentations:
+
+- [Github](./docs/TaskAPIDoc.md)
+- [Postman](https://documenter.getpostman.com/view/8553846/TVt1ARGk)
+
+**You can check out the deployed OpenAPI Documentation [here](https://task-9715.herokuapp.com/api-docs).**
 
 ## Deployment
 
