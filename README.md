@@ -9,9 +9,22 @@ It works like a simple ToDo application.
 # Install dependencies
 npm i
 # Create .env file if not yet created and add environment variables required in /src/config.js
-touch .env
+touch config/dev.env
 # Run the application
 npm run start
+```
+
+## Unit testing
+
+Test suite contains 28 tests. Tested using Jest framework.
+
+```bash
+# Install dev dependencies
+npm i --dev
+# Create qa.env file if not yet created and add environment variables required in /src/config.js
+touch config/qa.env
+# Run the application
+npm run test
 ```
 
 ## Tech Stack
