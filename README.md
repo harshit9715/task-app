@@ -6,7 +6,7 @@ It works like a simple ToDo application.
 ## Documentation
 
 You can check out the documentation [here](./docs/TaskAPIDoc.md).
-You can check out the deployed version [here](https://documenter.getpostman.com/view/8553846/TVt18jZN).
+You can check out the deployed version [here](https://documenter.getpostman.com/view/8553846/TVt1ARGk).
 
 ## Deployment
 
