@@ -18,10 +18,13 @@ app.use((req, res, next) => {
     next()
 })
 var options = {
-    customCss: '.swagger-ui .topbar { display: none } .swagger-ui .highlight-code>.microlight {max-width:1000px}'
+    swaggerOptions: {
+        url: 'https://raw.githubusercontent.com/harshit9715/task-app/main/docs/task.json'
+      },
+    customCss: '.swagger-ui .topbar { display: none } .swagger-ui .highlight-code>.microlight {max-width:1000px} .swagger-ui img.full-width {width: auto}'
   };
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(null, options));
 
 
 app.use(express.json())
