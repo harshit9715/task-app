@@ -17,9 +17,11 @@ app.use((req, res, next) => {
         return res.status(503).send({error: 'Site under maintenance, please try again later.'})
     next()
 })
+var options = {
+    customCss: '.swagger-ui .topbar { display: none } .swagger-ui .highlight-code>.microlight {max-width:1000px}'
+  };
 
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 
 
 app.use(express.json())
