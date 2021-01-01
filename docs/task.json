@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "TaskManager",
+    "title": "Task App",
     "description": "NodeJS express backend for a simple task app that remember your todos.",
     "contact": {},
     "version": "1.0"
@@ -29,11 +29,15 @@
               "schema": {
                 "$ref": "#/components/schemas/RegisterRequest"
               },
-              "example": {
-                "name": "Harshit",
-                "age": 23,
-                "password": "MightyCat",
-                "email": "harshit9715@gmail.com"
+              "examples": {
+                "example": {
+                  "value": {
+                    "name": "Harshit",
+                    "age": 23,
+                    "password": "MightyCat",
+                    "email": "harshit9715@gmail.com"
+                  }
+                }
               }
             }
           },
@@ -59,7 +63,11 @@
                 "schema": {
                   "$ref": "#/components/schemas/EmptyObject"
                 },
-                "example": {}
+                "examples": {
+                  "example": {
+                    "value": {}
+                  }
+                }
               }
             }
           }
@@ -84,9 +92,13 @@
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               },
-              "example": {
-                "email": "harshit9715@gmail.com",
-                "password": "MightyCat"
+              "examples": {
+                "example": {
+                  "value": {
+                    "email": "harshit9715@gmail.com",
+                    "password": "MightyCat"
+                  }
+                }
               }
             }
           },
@@ -112,7 +124,11 @@
                 "schema": {
                   "$ref": "#/components/schemas/EmptyObject"
                 },
-                "example": {}
+                "examples": {
+                  "example": {
+                    "value": {}
+                  }
+                }
               }
             }
           }
@@ -259,18 +275,18 @@
         "requestBody": {
           "content": {
             "multipart/form-data": {
-                "schema": {
-                  "required": [
-                    "avatar"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "avatar": {
-                      "type": "string",
-                      "format": "binary"
-                    }
+              "schema": {
+                "required": [
+                  "avatar"
+                ],
+                "type": "object",
+                "properties": {
+                  "avatar": {
+                    "type": "string",
+                    "format": "binary"
                   }
                 }
+              }
             }
           },
           "required": true
@@ -366,8 +382,12 @@
               "schema": {
                 "$ref": "#/components/schemas/LogoutRequest"
               },
-              "example": {
-                "global": false
+              "examples": {
+                "example": {
+                  "value": {
+                    "global": false
+                  }
+                }
               }
             }
           },
@@ -597,9 +617,13 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateTaskbyIDRequest"
               },
-              "example": {
-                "description": "wash cloths",
-                "completed": true
+              "examples": {
+                "example": {
+                  "value": {
+                    "description": "wash cloths",
+                    "completed": true
+                  }
+                }
               }
             }
           },
