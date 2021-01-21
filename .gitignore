@@ -1,7 +1,7 @@
 # Directories
 /node_modules
 /playground
+/config
 # Files
 
-dev.env
-prod.env
+*.env
