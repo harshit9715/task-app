@@ -4,5 +4,4 @@
 /config
 # Files
 
-package-lock.json
 *.env
