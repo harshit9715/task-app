@@ -5,10 +5,6 @@ const UserModel = require('../../src/models/users');
 const TaskModel = require('../../src/models/tasks');
 
 const userOneId = new mongoose.Types.ObjectId()
-console.log(process.env.JWT_SECRET, "secret")
-console.log(process.env.EMAIL_SENDER, "sender")
-console.log(process.env.MAILING_ENABLED, "isMailing")
-console.log(process.env.SES_REGION, "region")
 const userOne = {
     _id: userOneId,
     name: "Mike",
