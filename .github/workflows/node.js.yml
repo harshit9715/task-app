@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Run all unit-tests with Jest
 
 on:
   push:
@@ -16,11 +16,15 @@ jobs:
     environment: my-test-env
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [10.x, 12.x, 14.x, 15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
     - name: MongoDB in GitHub Actions
       # You may pin to the exact commit or the version.
       # uses: supercharge/mongodb-github-action@310bd1bbeb878d9de3e54ee492cbd9643b1e8875
